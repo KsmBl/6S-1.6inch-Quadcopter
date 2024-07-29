@@ -1,2 +1,7 @@
-# 6S-1.6inch-Quadcopter
-This is a "how to build a 6S 1.6 inch copter and is it usefull?" Instruction
+# Just Why
+I love building FPV quads, and I want to put as much power as possible into small drones. My idea was to build the smallest possible drone with a 6S LiPo battery. But which battery is light enough? Which frame supports a battery of this size? And which AIO or mini-stack supports 25.2 volts?
+
+
+# Battery
+Starting with the easiest part: which battery is light and small enough to fit on a 1.6-inch drone? The answer is none. The smallest LiPo with an XT30 connector I found was a 380mAh 6S LiPo, but 380mAh is way too high. What exists are 1S 300mAh LiPos with an A30 connector, and in theory, I could wire six of these batteries in series to create a 300mAh 6S LiPo. But in practice, it's much harder. How should I charge the LiPo? I would need a balance cable, but this means more weight, more soldering, more heat to the cells, and more work for each LiPo I want to build. And I want to have MANY LiPos for each copter.
+My solution was to design a custom PCB with six A30 connectors and wire the connectors in series via the PCB. This way, I only need one PCB and only one time for the work, and I can connect every A30 LiPo I find. Easy plug-and-play, easy charging with my Vifly Whoopstor V3. If you want to build a 6S tiny whoop too, you can download my PCB files. I designed it in LibrePCB. For the LED circuit, I used 0204 100 Ohm resistors, 1N4148 150mA / 75V diodes, and 0603 400 mcd 130° SMD LEDs. The circuit is not needed; the board also works without the outer parts. This is only used for LEDs next to the battery, which light up when a battery is connected.
